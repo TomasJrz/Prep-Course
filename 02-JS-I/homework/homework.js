@@ -184,7 +184,15 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
- 
+ if(numero > 0){
+  return "Es positivo"
+ }
+ else if(numero < 0){
+  return "Es negativo"
+ }
+ else{
+  return false
+ }
 }
 
 function agregarSimboloExclamacion(str) {
@@ -246,19 +254,16 @@ function esVocal(letra){
   if(letra.length > 1){
     return "Dato incorrecto"
   }
-  else if(letra === "a" || letra === "e" letra === "i" || letra === "o" || letra === "u"){
+  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
     return "Es vocal"
   }
-  else{
-    return "Dato incorrecto"
-  }
+  return "Dato incorrecto"
 }
-
 
 
 // No modificar nada debajo de esta línea
 // --------------------------------
-// puse dos barras
+
 module.exports = {
   nuevaString,
   nuevoNum,
